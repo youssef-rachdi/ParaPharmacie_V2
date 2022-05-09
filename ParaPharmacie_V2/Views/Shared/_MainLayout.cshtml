@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="~/image/png" sizes="16x16" href="~/image/staff-aesculapius-solid.svg">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="~/Content/style.css">
+
+    @*swiper_bundele*@
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    @*navbar*@
+    <header class="header">
+
+        <a href="#" class="logo"> <img src="~/image/staff-aesculapius-solid.svg" alt=""> Para-Pharmacie </a>
+
+        <nav class="navbar">
+            @Html.ActionLink("Accueil", "Index", "Home")
+            <a href="#products">produits</a>
+            <a href="#categories">Catégories</a>
+            <a href="#review">Avis</a>
+            <a href="#contact">Contact</a>
+            <a href="#local">Localisation</a>
+
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="~/image/cart-img-1.png" alt="">
+                <div class="content">
+                    <h3></h3>
+                    <span class="price">$4.99/-</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="~/image/cart-img-2.png" alt="">
+                <div class="content">
+                    <h3></h3>
+                    <span class="price">$4.99/-</span>
+
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="~/image/cart-img-3.png" alt="">
+                <div class="content">
+                    <h3></h3>
+                    <span class="price">$4.99/-</span>
+                </div>
+            </div>
+            <div class="total"> total : $19.69/- </div>
+            <a href="#" class="btn">checkout</a>
+        </div>
+
+        <form action="" class="login-form">
+            <h3> Conneter maintenat</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p>Oublier votre mot de passe <a href="#">cliquez ici </a></p>
+            <p>pas de compte ? <a href="#">créer maintenat</a></p>
+            <input type="submit" value="login now" class="btn">
+        </form>
+
+    </header>
+
+    <div style="min-height:90em;padding-top:100px;">
+        @RenderBody()
+    </div>
+
+    @*footer*@
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3> Nous à-propos </h3>
+                <p>Notre projet s'articule autour d'une application web qui affihe divers produits de beauté de la parapharmacie rageub</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +212 682-378607 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +212 682-378607 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> Zainab_r@live.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Maroc | Rabat | mini-Parc </a>
+            </div>
+
+            <div class="box">
+                <h3>Liens de navigation</h3>
+                <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> Accueil </a>
+                <a href="#products" class="links"> <i class="fas fa-arrow-right"></i> Produits </a>
+                <a href="#categories" class="links"> <i class="fas fa-arrow-right"></i> Catégories </a>
+                <a href="#review" class="links"> <i class="fas fa-arrow-right"></i> Avis </a>
+                <a href="#contact" class="links"> <i class="fas fa-arrow-right"></i> contact </a>
+                <a href="#local" class="links"> <i class="fas fa-arrow-right"></i> Localisation </a>
+
+            </div>
+
+            <div class="box">
+                <h3>Bulletin</h3>
+                <p>Conneter-vous pour les derniéres mises a jour</p>
+
+            </div>
+
+
+        </div>
+
+        <div class="credit">Copyright © <span>  TDI 203 </span>  | 2022 </div>
+
+    </section>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="~/Scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@using Microsoft.AspNet.Identity
+
+@if (Request.IsAuthenticated)
+{
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "Logoff" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ActionLink("Bonjour " + User.Identity.GetUserName(), "Index", "Manage", null, new { style = "margin-top: 1rem;display: inline-block;padding: 0.8rem 3rem;font-size: 1.7rem;border-radius: 0.5rem;border: 0.2rem solid var(--black);color: var(--black);cursor: pointer;background: none;" })
+
+        <a style=" margin-top: 1rem;display: inline-block;padding: 0.8rem 3rem;font-size: 1.7rem;border-radius: 0.5rem;border: 0.2rem solid var(--black);color: var(--black);cursor: pointer;background: none; margin-left:10px;" href="javascript:document.getElementById('Logoff').submit()">déconnexion <i class="bi bi-box-arrow-right"></i></a>
+
+    }
+}
+else
+{
+    
+    @Html.ActionLink("Login now", "Login", "Account", null, new { @class = "btn" })
+    @Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn" })
+    
+}
